@@ -1,115 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for consistent text rendering -->
   <meta charset="UTF-8">
-
-  <!-- Page title shown in browser tab and announced by screen readers -->
   <title>Don Norman – Contact</title>
 
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-  /* Heading styling: bigger and centered */
-  h1 {
-    font-size: 28px;       /* bigger than body text */
-    text-align: center;    /* center the page heading */
-    color: #0645ad;        /* optional color highlight */
-  }
+    /* Heading styling: bigger and centered */
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: #0645ad;
+    }
 
-  fieldset {
-    background-color: #e7f3ff;  /* light blue background for grouping */
-  }
+    fieldset {
+      background-color: #e7f3ff;
+    }
 
-  legend {
-    font-size: 18px;
-    font-weight: bold;
-  }
+    legend {
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-  label {
-    font-size: 16px;
-    color: #000;
-  }
+    label {
+      font-size: 16px;
+      color: #000;
+    }
 
-  input, textarea, button {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #000;
-  }
+    input, textarea, button {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #000;
+    }
 
-  button {
-    background-color: #fff3cd; /* warm amber for button */
-    border: none; /* minimal Lab 01 styling */
-    cursor: pointer;
-  }
+    button {
+      background-color: #fff3cd;
+      border: none;
+      cursor: pointer;
+    }
 
-  /* Navigation links: strictly allowed styles only */
-  nav a {
-    color: #0645ad;
-    text-decoration: none;
-  }
+    /* Navigation links: strictly allowed styles only */
+    nav a {
+      color: #0645ad;
+      text-decoration: none;
+    }
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+    /* Highlight the active page */
+    nav a[aria-current="page"] {
+      color: #000000;   /* black for emphasis */
+      font-weight: bold;
+    }
 
-  footer {
-    font-size: 14px;
-    text-align: center;
-  }
-</style>
+    nav a:hover {
+      text-decoration: underline;
+    }
 
+    nav ul {
+      list-style-type: disc; /* vertical list */
+      padding-left: 1.5em;
+    }
+
+    nav li {
+      margin-bottom: 0.3em; /* small spacing between links */
+    }
+
+    footer {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 1em;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Page header: identifies the page purpose -->
   <header>
     <h1>Contact</h1>
   </header>
 
-  <!-- Primary navigation: identical structure across all pages -->
   <nav aria-label="Primary navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="cv.html">CV</a></li>
-
-      <!-- Current page is indicated using aria-current -->
       <li><a href="contact.html" aria-current="page">Contact</a></li>
-
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
     </ul>
   </nav>
 
-  <!-- Main landmark: primary content of this page -->
   <main>
     <form action="#" method="post">
-      
-      <!-- Groups related form controls and provides context -->
       <fieldset>
         <legend>Send a Message</legend>
 
-        <!-- Label explicitly associated with its input -->
         <label for="subject">Subject</label><br>
         <input type="text" id="subject" name="subject"><br><br>
 
-        <!-- Textarea with clear label for screen readers -->
         <label for="message">Message</label><br>
         <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
 
-        <!-- Submit button is keyboard accessible by default -->
         <button type="submit">Send</button>
       </fieldset>
-
     </form>
   </main>
 
-  <!-- Footer provides supplementary information -->
   <footer>
     <p>Keyboard accessible form with screen-reader friendly labels.</p>
   </footer>

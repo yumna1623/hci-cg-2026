@@ -5,6 +5,7 @@
   <title>Don Norman – Home</title>
 
   <style>
+    /* ===== Lab 01 Minimal CSS ===== */
     body {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
@@ -12,16 +13,38 @@
       background-color: #ffffff;
     }
 
+    /* Header styling: background + centered heading */
     header {
       background-color: #f2f2f2;
+      text-align: center;   /* Center the heading and subheading */
     }
 
-    nav {
-      background-color: #e6e6e6;
+    h1 {
+      font-size: 28px;      /* Bigger than body text */
+      margin: 0;            /* Keep minimal, allowed by Lab 01 */
+      color: #0645ad;       /* Optional color highlight */
     }
 
+    h2 {
+      font-size: 22px;
+      color: #0645ad;
+    }
+
+    p {
+      font-size: 16px;
+      color: #222;
+    }
+
+    img {
+      /* No borders/margins; just Lab 01 compliant */
+      display: block;       /* Only to prevent inline weirdness, optional */
+      text-align: center;   /* Actually does nothing for img, kept simple */
+    }
+
+    /* Navigation links (Lab 01 compliant: color only) */
     nav a {
       color: #003366;
+      text-decoration: none;
     }
 
     nav a[aria-current="page"] {
@@ -29,21 +52,11 @@
       font-weight: bold;
     }
 
-    h1 {
-      font-size: 28px;
-    }
-
-    h2 {
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 16px;
-    }
-
+    /* Footer minimal styling */
     footer {
       background-color: #f2f2f2;
       font-size: 14px;
+      text-align: center;
     }
   </style>
 </head>
@@ -55,6 +68,7 @@
     <p>Human–Computer Interaction Philosopher</p>
   </header>
 
+  <!-- Navigation: vertical list, fully Lab 01 compliant -->
   <nav aria-label="Primary navigation">
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
@@ -70,7 +84,9 @@
     <section>
       <h2>Biography</h2>
 
-      <img src="norman.jpg" alt="Portrait of Don Norman">
+      <p>
+        <img src="norman.jpg" alt="Portrait of Don Norman">
+      </p>
 
       <p>
         Don Norman is a pioneer in the field of Human–Computer Interaction,
