@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for consistent rendering -->
   <meta charset="UTF-8">
-
-  <!-- Page title shown in browser tab and announced by screen readers -->
   <title>Interaction Analysis – Norman vs. GOMS</title>
 
   <style>
-    /* Minimal styling (Lab 01 allowed): highlight rows where Norman and GOMS directly correspond */
-    .norman-goms-match {
-      background-color: #fff3cd; /* warm, subtle amber */
+    /* Lab 01 allowed CSS only */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #000;
     }
+
+    header, main, footer, section, nav, table, ul, li, p, h1, h2, h3, h4 {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #000;
+    }
+    h1 {
+  font-size: 28px;       /* bigger than body text */
+  text-align: center;    /* center heading */
+}
+
+    /* Highlighted rows (Norman ↔ GOMS direct match) */
+    .norman-goms-match {
+      background-color: #fff3cd; /* subtle amber */
+    }
+
+    a { color: #0645ad; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    table {
+      border-collapse: collapse; /* single border */
+      width: 100%;
+      font-size: 0.95em;
+    }
+
+    th, td {
+      border: 1px solid #000; /* single borders allowed in Lab 01 */
+      padding: 0.3em;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    caption {
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 0.3em;
+    }
+
+    h1, h2, h3, h4 { margin: 0.3em 0; }
+    ul { margin: 0.3em 0 0.3em 1.5em; }
+    pre, code { font-family: monospace; }
   </style>
 </head>
 <body>
 
-  <!-- Page header: identifies topic and context -->
   <header>
     <h1>Interaction Analysis</h1>
     <p>Norman (1988) vs. GOMS (1983): Enable Wi-Fi (iPhone 13 / Samsung S25)</p>
   </header>
 
-  <!-- Primary navigation: consistent across all site pages -->
   <nav aria-label="Primary navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="contact.html">Contact</a></li>
-
-      <!-- Current page indicated for screen reader orientation -->
       <li><a href="analysis.html" aria-current="page">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
     </ul>
   </nav>
 
-  <!-- Main landmark: unique content of this page -->
   <main>
 
     <section>
       <h2>Norman vs. GOMS Comparison Table</h2>
 
-      <!-- Data table: caption + thead/tbody support accessibility -->
-      <table border="1">
+      <table>
         <caption>
           Comparison of Norman’s stages and GOMS concepts using the Wi-Fi toggle example
         </caption>
@@ -58,7 +93,6 @@
         </thead>
 
         <tbody>
-          <!-- Highlighted rows indicate direct Norman ↔ GOMS correspondence -->
           <tr class="norman-goms-match">
             <th scope="row">
               Goal ↔ GOAL<br>
@@ -87,19 +121,14 @@
             <td>
               Decision (Cognitive Step):<br>
               “I’ll use the quick toggle.”<br><br>
-
               <strong>Note:</strong> GOMS typically models a single dominant method for simple, routine tasks.<br><br>
-
               If multiple methods were modeled, Selection Rules would formally encode the choice logic that Norman lumps under “Planning.”<br><br>
-
               User implicitly prefers quick toggle over Settings due to efficiency.
             </td>
             <td>
               ✅ <strong>Method &amp; Selection Rules:</strong><br><br>
-
               • iPhone: Swipe down → Control Center → Wi-Fi<br>
               • Samsung: Swipe down → Quick Panel → Wi-Fi<br><br>
-
               <strong>Selection Rule (optional):</strong>
               If device is unlocked → use Quick-Toggle-Method.
               Used only when multiple methods are explicitly modeled.
@@ -107,9 +136,7 @@
             <td>
               ✅ <strong>Conceptual Match</strong><br>
               Both models represent high-level action planning.<br><br>
-
               Norman’s “Plan” is realized as the GOMS “Method.” The choice aspect is implicit in GOMS for simple cases, explicit as Selection Rules for complex ones.<br><br>
-
               🟡 <strong>Contextual Alignment</strong> — Handled implicitly in Norman; explicit but optional in GOMS.
             </td>
           </tr>
@@ -143,7 +170,6 @@
             <td>
               <strong>Operator:</strong> Tap (or click).<br>
               This is a primitive, timed motor action.<br><br>
-
               <strong>KLM Sequence:</strong> [M][P][K]<br>
               • [M]: Mental prep to point (~1.35s)<br>
               • [P]: Point to icon (~1.1s)<br>
@@ -188,7 +214,6 @@
 
   </main>
 
-  <!-- Footer: supplementary navigation -->
   <footer>
     <p><a href="index.html">Back to Home</a></p>
   </footer>
